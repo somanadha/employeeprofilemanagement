@@ -28,7 +28,6 @@ pipeline {
             }
         }
     }
-
     post {
         success {
             echo "✅ Checkout, Build, Dockerize & Deploy completed successfully!"
