@@ -7,6 +7,7 @@ pipeline {
         DOCKER_IMAGE = "employeeprofilemanagement_image"
     }
 
+    // Various stages in the Pipeline Process:
     stages {
         stage('Checkout') {
             steps {
