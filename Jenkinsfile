@@ -6,6 +6,7 @@ pipeline {
         // DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
         DOCKER_IMAGE = "employeeprofilemanagement_image"
     }
+
     stages {
         stage('Checkout') {
             steps {
@@ -28,6 +29,7 @@ pipeline {
             }
         }
     }
+
     post {
         success {
             echo "✅ Checkout, Build, Dockerize & Deploy completed successfully!"
