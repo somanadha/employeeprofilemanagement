@@ -25,13 +25,13 @@ public class EmployeeProfileController {
     }
 
     @GetMapping("findById")
-    public ResponseEntity<EmployeeProfile> findEmployeeProfileById(@PathVariable Integer employeeProfileId) {
+    public ResponseEntity<EmployeeProfile> findEmployeeProfileById(Integer employeeProfileId) {
         var employeeProfile = employeeProfileService.findById(employeeProfileId);
         return new ResponseEntity<>(employeeProfile.orElse(null), HttpStatus.OK);
     }
 
     @DeleteMapping("deleteById")
-    public ResponseEntity<EmployeeProfile> deleteEmployeeProfileById(@PathVariable Integer employeeProfileId) {
+    public ResponseEntity<EmployeeProfile> deleteEmployeeProfileById(Integer employeeProfileId) {
         employeeProfileService.deleteById(employeeProfileId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
