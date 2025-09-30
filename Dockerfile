@@ -19,9 +19,8 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar employeeprofilemanagement.jar
 
 # This is the key part to get all the dependency jars
-# The 'go-offline' goal from the first stage already downloaded them.
 # The 'dependency:copy-dependencies' goal copies all the jars to a specific directory.
-COPY --from=build /app/target/dependency /app/dependency
+#COPY --from=build /app/target/dependency /app/dependency
 
 # Application is running in port 8200
 EXPOSE 8200
