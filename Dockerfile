@@ -1,4 +1,4 @@
-# Stage 1: Build the application and resolve dependencies
+# Stage 1: Build the application and resolve dependencies Using Maven 3.9.4 running on JDK 21
 FROM maven:3.9.4-eclipse-temurin-21-alpine AS build
 WORKDIR /app
 COPY pom.xml .
@@ -11,7 +11,7 @@ RUN mvn dependency:copy-dependencies
 # Package the application as a fat jar or a standard jar
 RUN mvn -X package -DskipTests
 
-# Stage 2: Create the final image
+# Stage 2: Create the final image using JRE 21 only
 FROM eclipse-temurin:21-alpine
 WORKDIR /app
 
