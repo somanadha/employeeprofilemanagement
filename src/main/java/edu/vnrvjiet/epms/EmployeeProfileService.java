@@ -13,7 +13,8 @@ public class EmployeeProfileService {
     EmployeeProfileRepository employeeProfileRepository;
 
     public EmployeeProfile save(EmployeeProfile employeeProfile) {
-        return employeeProfileRepository.save(employeeProfile);
+           return employeeProfileRepository.save(employeeProfile);
+
     }
 
     public Optional<EmployeeProfile> findById(Integer employeeProfileId) {
