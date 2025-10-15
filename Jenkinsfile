@@ -5,6 +5,9 @@ pipeline {
         // Uncomment below if pushing to DockerHub
         // DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
         DOCKER_IMAGE = "employeeprofilemanagement_image"
+
+        // Database URL used when dockerization is done for the application
+        DB_URL = "jdbc:postgresql://host.docker.internal:5432/epms_db"
     }
 
     // Various stages in the Pipeline Process:
